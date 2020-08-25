@@ -53,7 +53,7 @@ function draw() {
 }
 
 function mouseClicked(){
-  if(game){
+  if(game && gameEnter){
      game.gameStop();
   }
 }

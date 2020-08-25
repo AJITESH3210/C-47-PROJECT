@@ -41,7 +41,10 @@ class Symptoms{
         text8.position(displayWidth/2 - 550, displayHeight/2 -60);
         text8.html("• Thinking about different personal problems while doing some work.");
         
-       
+        var photo = createElement("img");
+        photo.position(displayWidth/2  + 100, displayHeight/2 - 50);
+        photo.elt.src = "sym.png";
+
             var Symbutton = createButton("Next");
             Symbutton.position(displayWidth - 300, displayHeight - 200); 
 
@@ -58,7 +61,7 @@ class Symptoms{
                 Symbutton.hide();
 
                 tips = new Tips();
-                tips.display();
+                tips.display(); 
 
             });
 

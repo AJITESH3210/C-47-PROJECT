@@ -15,7 +15,7 @@ class Game{
         ball8 = createSprite(random(0, width), random(0, height), 60, 60);
         ball9 = createSprite(random(0, width), random(0, height), 60, 60);
         ball10 = createSprite(random(0, width), random(0, height), 60, 60);
-        
+
         ball1.velocityX = random(-7, 25);
         ball1.velocityY = random(-7, 25);
 
@@ -238,7 +238,23 @@ class Game{
         if(ball10.velocityX === 0 && ball10.velocityY === 0){
             var d = dist(mouseX, mouseY, ball10.x, ball10.y);
             lost = true;
-
+            won = false
+            
+            var button = createButton("Next");
+            button.position(displayWidth - 300, displayHeight - 200); 
+    
+            button.mousePressed(function(){
+                clickButton = 1;
+                gameEnter = false;
+    
+                winText.hide();
+                loseText.hide();
+                button.hide();
+    
+                symptoms = new Symptoms();
+                symptoms.display();
+            })
+            
             if( d < ball10.width/2 || d < ball10.height/2 ){
                 clicked = true;
                 lost = false;
@@ -248,3 +264,4 @@ class Game{
     }
 
 }
+//added  241 line completetly.
